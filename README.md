@@ -1,8 +1,8 @@
-#swapi-c
+# swapi-c
 
 API wrapper for the [Star Wars API](http://swapi.co/) written in C
 
-##Usage
+## Usage
 
 Include the header to access all the methods:
 
@@ -10,7 +10,7 @@ Include the header to access all the methods:
 #include "swapi.h"
 ```
 
-##Compiling
+## Compiling
 
 swapi-c relies on libcurl and libjansson. Use their respective flags to compile your C code:
 
@@ -18,7 +18,7 @@ swapi-c relies on libcurl and libjansson. Use their respective flags to compile 
 gcc -o demo demo.c -lcurl -ljansson
 ```
 
-##Variables Directory
+## Variables Directory
 
 Each type of result has its own customized struct:
 
@@ -38,9 +38,9 @@ Multiple results also have their own structs:
 * [struct swapi_species_all](#swapi-species-all)
 * [struct swapi_planets_all](#swapi-planets-all)
 
-##Variables
+## Variables
 
-###<a name="swapi-people"></a>struct swapi_people
+### <a name="swapi-people"></a>struct swapi_people
 
 ```c
 struct swapi_people {
@@ -67,7 +67,7 @@ struct swapi_people {
 };
 ```
 
-###<a name="swapi-films"></a>struct swapi_films
+### <a name="swapi-films"></a>struct swapi_films
 
 ```c
 struct swapi_films {
@@ -92,7 +92,7 @@ struct swapi_films {
 };
 ```
 
-###<a name="swapi-starships"></a>struct swapi_starships
+### <a name="swapi-starships"></a>struct swapi_starships
 
 ```c
 struct swapi_starships {
@@ -119,7 +119,7 @@ struct swapi_starships {
 };
 ```
 
-###<a name="swapi-vehicles"></a>struct swapi_vehicles
+### <a name="swapi-vehicles"></a>struct swapi_vehicles
 
 ```c
 struct swapi_vehicles {
@@ -144,7 +144,7 @@ struct swapi_vehicles {
 };
 ```
 
-###<a name="swapi-species"></a>struct swapi_species
+### <a name="swapi-species"></a>struct swapi_species
 
 ```c
 struct swapi_species {
@@ -168,7 +168,7 @@ struct swapi_species {
 };
 ```
 
-###<a name="swapi-planets"></a>struct swapi_planets
+### <a name="swapi-planets"></a>struct swapi_planets
 
 ```c
 struct swapi_planets {
@@ -191,7 +191,7 @@ struct swapi_planets {
 };
 ```
 
-###<a name="swapi-people-all"></a>struct swapi_people_all
+### <a name="swapi-people-all"></a>struct swapi_people_all
 
 ```c
 struct swapi_people_all {
@@ -203,7 +203,7 @@ struct swapi_people_all {
 };
 ```
 
-###<a name="swapi-films-all"></a>struct swapi_films_all
+### <a name="swapi-films-all"></a>struct swapi_films_all
 
 ```c
 struct swapi_films_all {
@@ -215,7 +215,7 @@ struct swapi_films_all {
 };
 ```
 
-###<a name="swapi-starships-all"></a>struct swapi_starships_all
+### <a name="swapi-starships-all"></a>struct swapi_starships_all
 
 ```c
 struct swapi_starships_all {
@@ -227,7 +227,7 @@ struct swapi_starships_all {
 };
 ```
 
-###<a name="swapi-vehicles-all"></a>struct swapi_vehicles_all
+### <a name="swapi-vehicles-all"></a>struct swapi_vehicles_all
 
 ```c
 struct swapi_vehicles_all {
@@ -239,7 +239,7 @@ struct swapi_vehicles_all {
 };
 ```
 
-###<a name="swapi-species-all"></a>struct swapi_species_all
+### <a name="swapi-species-all"></a>struct swapi_species_all
 
 ```c
 struct swapi_species_all {
@@ -251,7 +251,7 @@ struct swapi_species_all {
 };
 ```
 
-###<a name="swapi-planets-all"></a>struct swapi_planets_all
+### <a name="swapi-planets-all"></a>struct swapi_planets_all
 
 ```c
 struct swapi_planets_all {
@@ -263,7 +263,7 @@ struct swapi_planets_all {
 };
 ```
 
-##Methods Directory
+## Methods Directory
 
 To get a single result for a person, film, starship, vehicle, species, or planet:
 
@@ -319,9 +319,9 @@ Multiple results may also be dumped:
 * [swapi_dump_species_all](#swapi-dump-species-all)
 * [swapi_dump_planets_all](#swapi-dump-planets-all)
 
-##Methods
+## Methods
 
-###<a name="swapi-get-person"></a>swapi_get_person(struct swapi_people \*person, int id)
+### <a name="swapi-get-person"></a>swapi_get_person(struct swapi_people \*person, int id)
 
 ```c
 struct swapi_people person;
@@ -338,7 +338,7 @@ Mass:       77
 ...
 ```
 
-###<a name="swapi-get-film"></a>void swapi_get_film(struct swapi_films \*film, int id)
+### <a name="swapi-get-film"></a>void swapi_get_film(struct swapi_films \*film, int id)
 
 ```c
 struct swapi_films film;
@@ -355,7 +355,7 @@ It is a period of civil war.
 ...
 ```
 
-###<a name="swapi-get-starship"></a>void swapi_get_starship(struct swapi_starships \*starship, int id)
+### <a name="swapi-get-starship"></a>void swapi_get_starship(struct swapi_starships \*starship, int id)
 
 ```c
 struct swapi_starships starship;
@@ -372,7 +372,7 @@ Manufacturer:           Corellian Engineering Corporation
 ...
 ```
 
-###<a name="swapi-get-vehicle"></a>void swapi_get_vehicle(struct swapi_vehicles \*vehicle, int id)
+### <a name="swapi-get-vehicle"></a>void swapi_get_vehicle(struct swapi_vehicles \*vehicle, int id)
 
 ```c
 struct swapi_vehicles vehicle;
@@ -388,7 +388,7 @@ Model:                  Digger Crawler
 Manufacturer:           Corellia Mining Corporation
 ```
 
-###<a name="swapi-get-species"></a>void swapi_get_species(struct swapi_species \*species, int id)
+### <a name="swapi-get-species"></a>void swapi_get_species(struct swapi_species \*species, int id)
 
 ```c
 struct swapi_species species;
@@ -404,7 +404,7 @@ Classification:   mammal
 Designation:      sentient
 ```
 
-###<a name="swapi-get-planet"></a>void swapi_get_planet(struct swapi_planets \*planet, int id)
+### <a name="swapi-get-planet"></a>void swapi_get_planet(struct swapi_planets \*planet, int id)
 
 ```c
 struct swapi_planets planet;
@@ -420,7 +420,7 @@ Rotation Period: 23
 Orbital Period:  304
 ```
 
-###<a name="swapi-get-person-url"></a>swapi_get_person_url(struct swapi_people \*person, char \*url)
+### <a name="swapi-get-person-url"></a>swapi_get_person_url(struct swapi_people \*person, char \*url)
 
 ```c
 struct swapi_people person;
@@ -437,7 +437,7 @@ Mass:       77
 ...
 ```
 
-###<a name="swapi-get-film-url"></a>void swapi_get_film_url(struct swapi_films \*film, char \*url)
+### <a name="swapi-get-film-url"></a>void swapi_get_film_url(struct swapi_films \*film, char \*url)
 
 ```c
 struct swapi_films film;
@@ -454,7 +454,7 @@ It is a period of civil war.
 ...
 ```
 
-###<a name="swapi-get-starship-url"></a>void swapi_get_starship_url(struct swapi_starships \*starship, char \*url)
+### <a name="swapi-get-starship-url"></a>void swapi_get_starship_url(struct swapi_starships \*starship, char \*url)
 
 ```c
 struct swapi_starships starship;
@@ -471,7 +471,7 @@ Manufacturer:           Corellian Engineering Corporation
 ...
 ```
 
-###<a name="swapi-get-vehicle-url"></a>void swapi_get_vehicle_url(struct swapi_vehicles \*vehicle, char \*url)
+### <a name="swapi-get-vehicle-url"></a>void swapi_get_vehicle_url(struct swapi_vehicles \*vehicle, char \*url)
 
 ```c
 struct swapi_vehicles vehicle;
@@ -487,7 +487,7 @@ Model:                  Digger Crawler
 Manufacturer:           Corellia Mining Corporation
 ```
 
-###<a name="swapi-get-species-url"></a>void swapi_get_species_url(struct swapi_species \*species, char \*url)
+### <a name="swapi-get-species-url"></a>void swapi_get_species_url(struct swapi_species \*species, char \*url)
 
 ```c
 struct swapi_species species;
@@ -503,7 +503,7 @@ Classification:   mammal
 Designation:      sentient
 ```
 
-###<a name="swapi-get-planet-url"></a>void swapi_get_planet_url(struct swapi_planets \*planet, char \*url)
+### <a name="swapi-get-planet-url"></a>void swapi_get_planet_url(struct swapi_planets \*planet, char \*url)
 
 ```c
 struct swapi_planets planet;
@@ -519,7 +519,7 @@ Rotation Period: 23
 Orbital Period:  304
 ```
 
-###<a name="swapi-get-people-all"></a>void swapi_get_people_all(struct swapi_people_all \*people, int id)
+### <a name="swapi-get-people-all"></a>void swapi_get_people_all(struct swapi_people_all \*people, int id)
 
 ```c
 struct swapi_people_all people;
@@ -532,11 +532,11 @@ Returns:
 ```
 Count:    82
 Next:     http://swapi.co/api/people/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-films-all"></a>void swapi_get_films_all(struct swapi_films_all \*films, int id)
+### <a name="swapi-get-films-all"></a>void swapi_get_films_all(struct swapi_films_all \*films, int id)
 
 ```c
 struct swapi_films_all films;
@@ -548,12 +548,12 @@ Returns:
 
 ```
 Count:    6
-Next:     
-Previous: 
+Next:
+Previous:
 ...
 ```
 
-###<a name="swapi-get-starships-all"></a>void swapi_get_starships_all(struct swapi_starships_all \*starships, int id)
+### <a name="swapi-get-starships-all"></a>void swapi_get_starships_all(struct swapi_starships_all \*starships, int id)
 
 ```c
 struct swapi_starships_all starships;
@@ -566,11 +566,11 @@ Returns:
 ```
 Count:    36
 Next:     http://swapi.co/api/starships/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-vehicles-all"></a>void swapi_get_vehicles_all(struct swapi_vehicles_all \*vehicles, int id)
+### <a name="swapi-get-vehicles-all"></a>void swapi_get_vehicles_all(struct swapi_vehicles_all \*vehicles, int id)
 
 ```c
 struct swapi_vehicles_all vehicles;
@@ -583,11 +583,11 @@ Returns:
 ```
 Count:    39
 Next:     http://swapi.co/api/vehicles/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-species-all"></a>void swapi_get_species_all(struct swapi_species_all \*species, int id)
+### <a name="swapi-get-species-all"></a>void swapi_get_species_all(struct swapi_species_all \*species, int id)
 
 ```c
 struct swapi_species_all species;
@@ -600,11 +600,11 @@ Returns:
 ```
 Count:    37
 Next:     http://swapi.co/api/species/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-planets-all"></a>void swapi_get_planets_all(struct swapi_planets_all \*planets, int id)
+### <a name="swapi-get-planets-all"></a>void swapi_get_planets_all(struct swapi_planets_all \*planets, int id)
 
 ```c
 struct swapi_planets_all planets;
@@ -617,11 +617,11 @@ Returns:
 ```
 Count:    60
 Next:     http://swapi.co/api/planets/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-people-all-url"></a>void swapi_get_people_all_url(struct swapi_people_all \*people, char \*url)
+### <a name="swapi-get-people-all-url"></a>void swapi_get_people_all_url(struct swapi_people_all \*people, char \*url)
 
 ```c
 struct swapi_people_all people;
@@ -634,11 +634,11 @@ Returns:
 ```
 Count:    82
 Next:     http://swapi.co/api/people/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-films-all-url"></a>void swapi_get_films_all_url(struct swapi_films_all \*films, char \*url)
+### <a name="swapi-get-films-all-url"></a>void swapi_get_films_all_url(struct swapi_films_all \*films, char \*url)
 
 ```c
 struct swapi_films_all films;
@@ -650,12 +650,12 @@ Returns:
 
 ```
 Count:    6
-Next:     
-Previous: 
+Next:
+Previous:
 ...
 ```
 
-###<a name="swapi-get-starships-all-url"></a>void swapi_get_starships_all_url(struct swapi_starships_all \*starships, char \*url)
+### <a name="swapi-get-starships-all-url"></a>void swapi_get_starships_all_url(struct swapi_starships_all \*starships, char \*url)
 
 ```c
 struct swapi_starships_all starships;
@@ -668,11 +668,11 @@ Returns:
 ```
 Count:    36
 Next:     http://swapi.co/api/starships/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-vehicles-all-url"></a>void swapi_get_vehicles_all_url(struct swapi_vehicles_all \*vehicles, char \*url)
+### <a name="swapi-get-vehicles-all-url"></a>void swapi_get_vehicles_all_url(struct swapi_vehicles_all \*vehicles, char \*url)
 
 ```c
 struct swapi_vehicles_all vehicles;
@@ -685,11 +685,11 @@ Returns:
 ```
 Count:    39
 Next:     http://swapi.co/api/vehicles/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-species-all-url"></a>void swapi_get_species_all_url(struct swapi_species_all \*species, char \*url)
+### <a name="swapi-get-species-all-url"></a>void swapi_get_species_all_url(struct swapi_species_all \*species, char \*url)
 
 ```c
 struct swapi_species_all species;
@@ -702,11 +702,11 @@ Returns:
 ```
 Count:    37
 Next:     http://swapi.co/api/species/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-get-planets-all-url"></a>void swapi_get_planets_all_url(struct swapi_planets_all \*planets, char \*url)
+### <a name="swapi-get-planets-all-url"></a>void swapi_get_planets_all_url(struct swapi_planets_all \*planets, char \*url)
 
 ```c
 struct swapi_planets_all planets;
@@ -719,30 +719,30 @@ Returns:
 ```
 Count:    60
 Next:     http://swapi.co/api/planets/?page=2
-Previous: 
+Previous:
 ...
 ```
 
-###<a name="swapi-dump-person"></a>void swapi_dump_person(struct swapi_people \*person)
+### <a name="swapi-dump-person"></a>void swapi_dump_person(struct swapi_people \*person)
 
-###<a name="swapi-dump-film"></a>void swapi_dump_film(struct swapi_films \*film)
+### <a name="swapi-dump-film"></a>void swapi_dump_film(struct swapi_films \*film)
 
-###<a name="swapi-dump-starship"></a>void swapi_dump_starship(struct swapi_starships \*starship)
+### <a name="swapi-dump-starship"></a>void swapi_dump_starship(struct swapi_starships \*starship)
 
-###<a name="swapi-dump-vehicle"></a>void swapi_dump_vehicle(struct swapi_vehicles \*vehicle)
+### <a name="swapi-dump-vehicle"></a>void swapi_dump_vehicle(struct swapi_vehicles \*vehicle)
 
-###<a name="swapi-dump-species"></a>void swapi_dump_species(struct swapi_species \*species)
+### <a name="swapi-dump-species"></a>void swapi_dump_species(struct swapi_species \*species)
 
-###<a name="swapi-dump-planet"></a>void swapi_dump_planet(struct swapi_planets \*planet)
+### <a name="swapi-dump-planet"></a>void swapi_dump_planet(struct swapi_planets \*planet)
 
-###<a name="swapi-dump-people-all"></a>void swapi_dump_people_all(struct swapi_people_all \*people)
+### <a name="swapi-dump-people-all"></a>void swapi_dump_people_all(struct swapi_people_all \*people)
 
-###<a name="swapi-dump-films-all"></a>void swapi_dump_films_all(struct swapi_films_all \*films)
+### <a name="swapi-dump-films-all"></a>void swapi_dump_films_all(struct swapi_films_all \*films)
 
-###<a name="swapi-dump-starships-all"></a>void swapi_dump_starships_all(struct swapi_starships_all \*starships)
+### <a name="swapi-dump-starships-all"></a>void swapi_dump_starships_all(struct swapi_starships_all \*starships)
 
-###<a name="swapi-dump-vehicles-all"></a>void swapi_dump_vehicles_all(struct swapi_vehicles_all \*vehicles)
+### <a name="swapi-dump-vehicles-all"></a>void swapi_dump_vehicles_all(struct swapi_vehicles_all \*vehicles)
 
-###<a name="swapi-dump-species-all"></a>void swapi_dump_species_all(struct swapi_species_all \*species)
+### <a name="swapi-dump-species-all"></a>void swapi_dump_species_all(struct swapi_species_all \*species)
 
-###<a name="swapi-dump-planets-all"></a>void swapi_dump_planets_all(struct swapi_planets_all \*planets)
+### <a name="swapi-dump-planets-all"></a>void swapi_dump_planets_all(struct swapi_planets_all \*planets)

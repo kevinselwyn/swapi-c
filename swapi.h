@@ -10,7 +10,7 @@
 #define ARRAY_MAX 16
 #define RESULTS_MAX 10
 
-static char *swapi_root = "http://swapi.co/api";
+static char *swapi_root = "http://swapi.dev/api";
 
 struct swapi_memory {
 	char *memory;
